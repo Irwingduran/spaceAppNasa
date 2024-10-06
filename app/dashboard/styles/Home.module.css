@@ -1,6 +1,8 @@
 /* Cambia la fuente a Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+
+
 .body {
     font-family: 'Montserrat', sans-serif;
     /* Aplica la fuente Montserrat */
@@ -13,6 +15,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+
 }
 
 .header {

@@ -18,7 +18,7 @@ export default function Dashboard() {
           width={120}
           height={120}
         />
-        <h1>Kit de Herramientas</h1>
+        <h1 className='items-center'>DASHBOARD</h1>
       </header>
 
     
