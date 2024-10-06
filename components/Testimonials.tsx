@@ -48,8 +48,8 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
-        Sucesos reales captados en  
-        <span className="text-purple"> testimonios</span>
+       Real Events Captured In   
+        <span className="text-purple"> Testimonials</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">

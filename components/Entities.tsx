@@ -6,29 +6,36 @@ import Image from "next/image";
 export const entitiesItems = [
   {
     id: 1,
-    title: "Red Comunidades Refugio",
-    desc: "Centros creados por la comunidad, donde se ofrece servicios como asilo, alimentación, cuidado médico para mujeres en estado de vulnerabilidad.",
+    title: "NASA'S EONET - Natural Disaster Alert",
+    desc: "It uses real-time data from NASA to send alerts to foundations and NGOs in the network.",
     className: "md:col-span-2",
     thumbnail: "",
   },
   {
     id: 2,
-    title: "Red Comunidades Refugio",
-    desc: "Centros creados por la comunidad, donde se ofrece servicios como asilo, alimentación, cuidado médico para mujeres en estado de vulnerabilidad.",
+    title: "Refugio Community Network",
+    desc: "",
     className: "md:col-span-2",
     thumbnail: "",
   },
   {
     id: 3,
-    title: "Red Comunidades Refugio",
-    desc: "Centros creados por la comunidad, donde se ofrece servicios como asilo, alimentación, cuidado médico para mujeres en estado de vulnerabilidad.",
+    title: "Redistribution Of Emergency Funds",
+    desc: "",
     className: "md:col-span-2",
     thumbnail: "",
   },
   {
     id: 4,
-    title: "Red Comunidades Refugio",
-    desc: "Centros creados por la comunidad, donde se ofrece servicios como asilo, alimentación, cuidado médico para mujeres en estado de vulnerabilidad.",
+    title: "Coordination Platform",
+    desc: "",
+    className: "md:col-span-2",
+    thumbnail: "",
+  },
+  {
+    id: 5,
+    title: "Tax Benefit System",
+    desc: "",
     className: "md:col-span-2",
     thumbnail: "",
   },
@@ -40,7 +47,7 @@ const Entities = () => {
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
-        titulo <span className="text-purple">titulo</span>
+      Our tool<span className="text-purple">kit</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
