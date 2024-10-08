@@ -50,7 +50,7 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Gender justice in front of Climate Change"
+            words="Gender justice in the face of Climate Change"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
@@ -58,9 +58,9 @@ const Hero = () => {
             
           </p>
 
-          <a href="#">
+          <a href="/admin">
             <MagicButton
-              title="Register"
+              title="Start Demo"
               icon={<FaLocationArrow />}
               position="right"
             />
