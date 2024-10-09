@@ -59,7 +59,7 @@ export const gridItems = [
  
 const Grid = () => {
   return (
-    <section id="about">
+    <section className="" id="about">
       <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (
           <BentoGridItem

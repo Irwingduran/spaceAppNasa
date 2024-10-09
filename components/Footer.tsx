@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
+        <h1 className="heading lg:max-w-[45vw] text-black">
            <span className="text-purple">Be A Life Changer </span> For A Woman 
         </h1>
        

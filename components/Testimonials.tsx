@@ -47,7 +47,7 @@ export const testimonials = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20">
-      <h1 className="heading">
+      <h1 className="heading text-black">
        Real Events Captured In   
         <span className="text-purple"> Testimonials</span>
       </h1>

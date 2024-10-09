@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles/Home.module.css';
 import { FaDonate, FaUserShield, FaCheckCircle, FaHandsHelping, FaGlobeAmericas, FaWallet } from 'react-icons/fa';
+import { FloatingNav } from '@/components/ui/FloatingNavbar';
+
 
 
 export default function Dashboard() {
   return (
     <div className={`${styles.container} 'bg-white-100'`}>
-      {/* Encabezado */}
+      {/* Encabezado 
       <header className={styles.header}>
         <Image
           src="https://i.postimg.cc/nVwzRtMm/Isotipo1.png"
@@ -20,11 +22,13 @@ export default function Dashboard() {
         />
         <h1 className='items-center'>DASHBOARD</h1>
       </header>
-
+      */}
     
+    <FloatingNav />
+ 
 
       {/* Secciones del Dashboard */}
-      <div className={styles.grid}>
+      <div className={`${styles.grid} m-9 my-20`} >
 
         {/* Recolección de Donaciones */}
         <section className={styles.entities}>

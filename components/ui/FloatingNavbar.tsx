@@ -7,10 +7,11 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export const navItems = [
-  { name: "Home", link: "#home"}, 
+const defaultNavItems = [
+  { name: "Home", link: "#home"},
   { name: "About", link: "#about" },
   { name: "Donation", link: "#donation" },
   { name: "Testimonials", link: "#testimonials" },
@@ -18,10 +19,10 @@ export const navItems = [
 ];
 
 export const FloatingNav = ({
-  navItems,
+  navItems = defaultNavItems,
   className,
 }: {
-  navItems: {
+  navItems?: {
     name: string;
     link: string;
     icon?: JSX.Element;
@@ -29,24 +30,15 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
-  // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      let direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
@@ -66,10 +58,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          // change rounded-full to rounded-lg
-          // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
-          // change  pr-2 pl-8 py-2 to px-10 py-5
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-6 py-3 rounded-lg border border-black/10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-between",
           className
         )}
         style={{
@@ -77,28 +66,32 @@ export const FloatingNav = ({
           backgroundColor: "#fff",
           borderRadius: "12px",
           border: "1px solid #000",
-          color: "000",
+          color: "#000",
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-slate-950 dark:hover:text-neutral-300 hover:text-neutral-500 text-dark-#000"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
-          </Link>
-        ))}
-         
-         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <a href="/admin">Start</a>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> 
+        <Link href="/" className="flex items-center mr-6">
+          <Image
+            src="/1.2.png" // Update this path to the actual location of your logo file
+            alt="Refugio.Today Logo"
+            width={70}
+            height={20}
+            className="object-contain"
+          />
+        </Link>
+        <div className="flex items-center space-x-4">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link-${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-black items-center flex space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="text-sm font-medium cursor-pointer">{navItem.name}</span>
+            </Link>
+          ))}
+        </div>
       </motion.div>
     </AnimatePresence>
   );

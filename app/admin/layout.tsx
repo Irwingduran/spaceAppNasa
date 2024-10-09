@@ -4,7 +4,7 @@ import "./styles/globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Refugio | Dashboard",
+  title: "Refugio | Start",
   description: "Transparencia, Confianza, rastreabilidad y gestión de emergencias",
 };
 

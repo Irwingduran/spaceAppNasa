@@ -34,14 +34,14 @@ const config = {
           300: "rgba(255, 255, 255, 0.125)",
         },
         white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
+          DEFAULT: "#",
+          100: "#fff",
           200: "#C1C2D3",
         },
         blue: {
           "100": "#E4ECFF",
         },
-        purple: "#CBACF9",
+        purple: "#CB6CE6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
