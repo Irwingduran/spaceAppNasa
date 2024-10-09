@@ -53,8 +53,8 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   {/* */}
-  const leftLists = ["m", "u", "j"];
-  const rightLists = ["e", "r", ];
+  const leftLists = ["w", "o", "m"];
+  const rightLists = ["a", "n", ];
 
   const [copied, setCopied] = useState(false);
 
@@ -83,9 +83,9 @@ export const BentoGridItem = ({
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
+        background: "#CB6CE6",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "",
       }}
     >
       {/* add img divs */}

@@ -35,7 +35,7 @@ const Footer = () => {
            <span className="text-purple">Be A Life Changer </span> For A Woman 
         </h1>
        
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-black md:mt-10 my-5 text-center">
            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates cupiditate blanditiis quisquam tenetur ipsam ea sapiente earum eos? Adipisci sequi consectetur quidem cumque blanditiis non ea porro deleniti hic assumenda.
         </p>
         <a href="#">
